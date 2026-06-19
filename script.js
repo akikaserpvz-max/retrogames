@@ -29,7 +29,7 @@ async function cargarJuegos() {
         const res = await fetch(epocaSeleccionada + ".txt");
 
         if (!res.ok) {
-            throw new Error("No se pudo cargar el archivo");
+            throw new Error("No se encontró " + epocaSeleccionada + ".txt");
         }
 
         const data = await res.text();
@@ -41,7 +41,7 @@ async function cargarJuegos() {
 
             if (!mostrarTodos && i >= 3) continue;
 
-            const d = lineas[i].split(";");
+            const d = lineas[i].trim().split(";");
 
             if (d.length < 5) continue;
 
@@ -54,32 +54,49 @@ async function cargarJuegos() {
             const img = imagenes[nombre] || "img/sin.jpg";
 
             html += `
-            <div class="juego">
+                <div class="juego">
 
-                <img src="${img}"
-                     alt="${nombre}"
-                     onerror="this.src='img/sin.jpg'">
+                    <img
+                        src="${img}"
+                        alt="${nombre}"
+                        onerror="this.src='img/sin.jpg'">
 
-                <div class="info">
+                    <div class="info">
 
-                    <h3>${nombre}</h3>
+                        <h3>${nombre}</h3>
 
-                    <p>Época: ${epoca}</p>
-                    <p>Tamaño: ${tam}</p>
-                    <p>USD ${precio.toFixed(2)}</p>
-                    <p>Año: ${anio}</p>
+                        <p>Época: ${epoca}</p>
+                        <p>Tamaño: ${tam}</p>
+                        <p>USD ${precio.toFixed(2)}</p>
+                        <p>Año: ${anio}</p>
 
-                    <button onclick='agregar(${JSON.stringify(nombre)}, ${precio})'>
-                        Agregar al carrito
-                    </button>
+                        <button
+                            class="btnAgregar"
+                            data-nombre="${nombre}"
+                            data-precio="${precio}">
+                            Agregar al carrito
+                        </button>
+
+                    </div>
 
                 </div>
-
-            </div>
             `;
         }
 
         document.getElementById("catalogo").innerHTML = html;
+
+        document.querySelectorAll(".btnAgregar").forEach(btn => {
+
+            btn.addEventListener("click", function () {
+
+                agregar(
+                    this.dataset.nombre,
+                    Number(this.dataset.precio)
+                );
+
+            });
+
+        });
 
     } catch (error) {
 
@@ -130,15 +147,15 @@ function actualizar() {
         total += Number(j.precio);
 
         html += `
-        <div class="itemCarrito">
+            <div class="itemCarrito">
 
-            ${j.nombre} - USD ${Number(j.precio).toFixed(2)}
+                ${j.nombre} - USD ${Number(j.precio).toFixed(2)}
 
-            <button onclick="eliminar(${i})">
-                ❌
-            </button>
+                <button onclick="eliminar(${i})">
+                    ❌
+                </button>
 
-        </div>
+            </div>
         `;
     });
 
@@ -180,94 +197,12 @@ function irAPago() {
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
     window.location.href = "pago.html";
 }
 
-window.onload = () => {
+window.onload = function () {
     cargarJuegos();
     actualizar();
-};            </div>
-
-        </div>
-        `;
-    }
-
-    document.getElementById("catalogo").innerHTML = html;
-}
-
-function seleccionarEpoca(e){
-    epocaSeleccionada = e;
-    mostrarTodos = false;
-    cargarJuegos();
-}
-
-function agregar(nombre, precio){
-
-    carrito.push({nombre, precio});
-    guardarCarrito();
-    actualizar();
-}
-
-function eliminar(i){
-
-    carrito.splice(i,1);
-    guardarCarrito();
-    actualizar();
-}
-
-function actualizar(){
-
-    document.getElementById("cantidadCarrito").innerText = carrito.length;
-
-    let html = "";
-    total = 0;
-
-    carrito.forEach((j,i)=>{
-
-        total += j.precio;
-
-        html += `
-        <div class="itemCarrito">
-
-            ${j.nombre} - USD ${j.precio.toFixed(2)}
-
-            <button onclick="eliminar(${i})">❌</button>
-
-        </div>
-        `;
-    });
-
-    document.getElementById("listaCarrito").innerHTML = html;
-
-    document.getElementById("total").innerHTML =
-        `<b>Total: USD ${total.toFixed(2)}</b>`;
-}
-
-function buscarJuego(){
-
-    const t = document.getElementById("buscar").value.toLowerCase();
-
-    document.querySelectorAll(".juego").forEach(j=>{
-
-        const nombre = j.querySelector("h3").innerText.toLowerCase();
-
-        j.style.display = nombre.includes(t) ? "block" : "none";
-    });
-}
-
-function mostrarMas(){
-    mostrarTodos = true;
-    cargarJuegos();
-}
-
-function irAPago(){
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    window.location.href = "pago.html";
-}
-
-window.onload = ()=>{
-    cargarJuegos();
+};    cargarJuegos();
     actualizar();
 };
