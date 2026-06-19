@@ -1,68 +1,11 @@
-const imagenes = {
-    "Assassin's Creed Origins": "img/ac_origins.jpg",
-    "Ryse: Son of Rome": "img/ryse.jpg",
-    "Total War: Rome II": "img/rome2.jpg",
-    "Kingdom Come Deliverance": "img/kingdom_come.jpg",
-    "A Plague Tale Innocence": "img/plague_tale.jpg",
-    "Crusader Kings III": "img/ck3.jpg",
-    "Mafia Definitive Edition": "img/mafia.jpg",
-    "L.A. Noire": "img/lanoire.jpg",
-    "Grand Theft Auto V": "img/gta5.jpg",
-    "Cyberpunk 2077": "img/cyberpunk2077.jpg",
-    "Deus Ex Human Revolution": "img/deus_ex.jpg",
-    "Detroit Become Human": "img/detroit.jpg"
-};
+alert("SCRIPT FUNCIONA");
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let total = 0;
-let epocaSeleccionada = "antigua";
-let mostrarTodos = false;
-
-function guardarCarrito() {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+function cargarJuegos() {
+    document.getElementById("catalogo").innerHTML =
+        "<h2>Los juegos cargaron correctamente</h2>";
 }
 
-async function cargarJuegos() {
-
-    try {
-
-        const archivo = `${epocaSeleccionada}.txt`;
-        const res = await fetch(archivo);
-
-        if (!res.ok) {
-            throw new Error(`No se pudo cargar ${archivo}`);
-        }
-
-        const data = await res.text();
-
-        const lineas = data
-            .replace(/\r/g, "")
-            .trim()
-            .split("\n");
-
-        let html = "";
-
-        for (let i = 0; i < lineas.length; i++) {
-
-            if (!mostrarTodos && i >= 3) continue;
-
-            const d = lineas[i].split(";");
-
-            if (d.length < 5) continue;
-
-            const nombre = d[0].trim();
-            const epoca = d[1].trim();
-            const tam = d[2].trim();
-            const precio = parseFloat(d[3]);
-            const anio = d[4].trim();
-
-            const img = imagenes[nombre] || "img/sin.jpg";
-
-            html += `
-            <div class="juego">
-
-                <img src="${img}"
-                     alt="${nombre}"
+window.onload = cargarJuegos;                     alt="${nombre}"
                      onerror="this.src='img/sin.jpg'">
 
                 <div class="info">
