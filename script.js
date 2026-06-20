@@ -2,13 +2,12 @@ let carrito = [];
 let total = 0;
 
 let epocaSeleccionada = "todas";
-let mostrarTodos = true;
 
-// ================== BASE DE DATOS ==================
+// ================== JUEGOS ==================
 const juegos = [
     {
         nombre: "Assassin's Creed Origins",
-        epoca: "Antigua",
+        epoca: "antigua",
         tam: "45 GB",
         precio: 29.99,
         anio: 2017,
@@ -16,53 +15,148 @@ const juegos = [
     },
     {
         nombre: "Ryse: Son of Rome",
-        epoca: "Antigua",
+        epoca: "antigua",
         tam: "25 GB",
         precio: 19.99,
         anio: 2014,
         img: "img/ryse.jpg"
     },
     {
-        nombre: "Total War: Rome II",
-        epoca: "Antigua",
-        tam: "30 GB",
-        precio: 24.99,
-        anio: 2013,
-        img: "img/rome2.jpg"
-    },
-    {
         nombre: "Kingdom Come Deliverance",
-        epoca: "Medieval",
+        epoca: "medieval",
         tam: "60 GB",
         precio: 39.99,
         anio: 2018,
         img: "img/kingdom.jpg"
+    },
+    {
+        nombre: "Cyberpunk 2077",
+        epoca: "futurista",
+        tam: "70 GB",
+        precio: 59.99,
+        anio: 2020,
+        img: "img/cyberpunk.jpg"
     }
 ];
 
-// ================== CARGAR JUEGOS ==================
+// ================== CARGAR ==================
 function cargarJuegos() {
 
-    try {
+    let html = "";
 
-        let html = "";
+    const filtrados = juegos.filter(j =>
+        epocaSeleccionada === "todas" || j.epoca === epocaSeleccionada
+    );
 
-        const filtrados = juegos.filter(j => {
-            return epocaSeleccionada === "todas" || j.epoca === epocaSeleccionada;
-        });
+    filtrados.forEach(j => {
 
-        filtrados.forEach(juego => {
+        html += `
+        <div class="juego">
 
-            html += `
-            <div class="juego">
+            <img src="${j.img}"
+                 alt="${j.nombre}"
+                 onerror="this.src='img/sin.jpg'">
 
-                <img src="${juego.img}"
-                     alt="${juego.nombre}"
-                     onerror="this.src='img/sin.jpg'">
+            <div class="info">
 
-                <div class="info">
+                <h3>${j.nombre}</h3>
+                <p>${j.epoca}</p>
+                <p>${j.tam}</p>
+                <p>Año: ${j.anio}</p>
+                <p>USD ${j.precio.toFixed(2)}</p>
 
-                    <h3>${juego.nombre}</h3>
+                <button onclick='agregar(${JSON.stringify(j.nombre)}, ${j.precio})'>
+                    Agregar
+                </button>
+
+            </div>
+
+        </div>
+        `;
+    });
+
+    document.getElementById("catalogo").innerHTML = html;
+    actualizar();
+}
+
+// ================== FILTRO ==================
+function seleccionarEpoca(epoca) {
+    epocaSeleccionada = epoca;
+    cargarJuegos();
+}
+
+// ================== CARRITO ==================
+function agregar(nombre, precio) {
+
+    carrito.push({ nombre, precio: Number(precio) });
+    actualizar();
+}
+
+function eliminar(i) {
+    carrito.splice(i, 1);
+    actualizar();
+}
+
+// ================== ACTUALIZAR ==================
+function actualizar() {
+
+    document.getElementById("cantidadCarrito").innerText = carrito.length;
+
+    let html = "";
+    total = 0;
+
+    carrito.forEach((j, i) => {
+
+        total += j.precio;
+
+        html += `
+        <div class="itemCarrito">
+            ${j.nombre} - USD ${j.precio.toFixed(2)}
+            <button onclick="eliminar(${i})">❌</button>
+        </div>
+        `;
+    });
+
+    document.getElementById("listaCarrito").innerHTML = html;
+    document.getElementById("total").innerHTML =
+        `<b>Total: USD ${total.toFixed(2)}</b>`;
+}
+
+// ================== BUSCAR ==================
+function buscarJuego() {
+
+    const texto = document.getElementById("buscar").value.toLowerCase();
+
+    document.querySelectorAll(".juego").forEach(j => {
+
+        const nombre = j.querySelector("h3").innerText.toLowerCase();
+
+        j.style.display = nombre.includes(texto) ? "block" : "none";
+    });
+}
+
+// ================== MÁS ==================
+function mostrarMas() {
+    epocaSeleccionada = "todas";
+    cargarJuegos();
+}
+
+// ================== PAGO (IMPORTANTE: coincide con HTML) ==================
+function irAPago() {
+
+    if (carrito.length === 0) {
+        alert("El carrito está vacío");
+        return;
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    window.location.href = "pago.html";
+}
+
+// ================== INICIO ==================
+window.onload = function () {
+    cargarJuegos();
+};                    <h3>${juego.nombre}</h3>
                     <p>Época: ${juego.epoca}</p>
                     <p>Tamaño: ${juego.tam}</p>
                     <p>Año: ${juego.anio}</p>
