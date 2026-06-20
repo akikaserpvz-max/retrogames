@@ -8,12 +8,12 @@ Battlefield 4;Moderna;65 GB;14.99;2013;img/bf4.jpg
 Battlefield V;Moderna;80 GB;19.99;2018;img/bfv.jpg
 Watch Dogs;Moderna;40 GB;9.99;2014;img/watchdogs.jpg
 Watch Dogs 2;Moderna;50 GB;19.99;2016;img/watchdogs2.jpg
-FIFA 23;Moderna;50 GB;29.99;2022;img/fifa23.jpg
+Final Fantasy XV WINDOWS EDITION;Moderna;50 GB;29.99;2022;img/ffxv.jpg
 Persona 5 Royal;Moderna;110 GB;29.99;2022;img/p5r.jpg
 Need for Speed Heat;Moderna;30 GB;19.99;2019;img/nfsheat.jpg
 Need for Speed Payback;Moderna;25 GB;14.99;2017;img/nfspayback.jpg
 Far Cry 5;Moderna;40 GB;19.99;2018;img/farcry5.jpg
 Far Cry 6;Moderna;60 GB;29.99;2021;img/farcry6.jpg
-Assassin's Creed Valhalla;Moderna;70 GB;39.99;2020;img/valhalla.jpg
-Mortal Kombat 11;Moderna;45 GB;19.99;2019;img/mk11.jpg
+Life Is Strange Remastered Collection;Moderna;70 GB;39.99;2020;img/lis.jpg
+Spider-man Miles Morales;Moderna;45 GB;59.99;2019;img/spiderman.jpg
 The Last of Us Part II;Moderna;100 GB;39.99;2020;img/tlou2.jpg
