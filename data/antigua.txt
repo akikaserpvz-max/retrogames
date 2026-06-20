@@ -14,5 +14,5 @@ Civilization VI;Antigua;12 GB;29.99;2016;img/civ6.jpg
 Assassin's Creed Valhalla;Antigua;6 GB;47.99;2022;img/ac_valhalla.jpg
 Assassin's Creed Odyssey;Antigua;10 GB;35.99;2018;img/ac_oddysey.jpg
 Rome Total War;Antigua;2 GB;6.99;2004;img/rome1.jpg
-Age of Empires II;Antigua;2 GB;9.99;1999;img/aoe2.jpg
+Final Fantasy Tactics- The Ivalice Chronicles;Antigua;2 GB;39.99;2025;img/fft.jpg
 Shadow of Rome;Antigua;7 GB;7.99;2005;img/shadowrome.jpg
