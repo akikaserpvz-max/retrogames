@@ -2,11 +2,9 @@ Kingdom Come Deliverance;medieval;70 GB;39.99;2018;img/kingdom_come.jpg
 A Plague Tale Innocence;medieval;50 GB;34.99;2019;img/plague_tale.jpg
 Crusader Kings III;medieval;8 GB;49.99;2020;img/ck3.jpg
 Mount & Blade Warband;Medieval;5 GB;9.99;2010;img/warband.jpg
-Mount & Blade II Bannerlord;Medieval;40 GB;29.99;2020;img/bannerlord.jpg
 Chivalry 2;Medieval;30 GB;24.99;2021;img/chivalry2.jpg
 For Honor;Medieval;50 GB;19.99;2017;img/forhonor.jpg
 Stronghold Crusader;Medieval;2 GB;4.99;2002;img/stronghold.jpg
-Stronghold Legends;Medieval;4 GB;6.99;2006;img/strongholdlegends.jpg
 The Witcher 3;Medieval;60 GB;29.99;2015;img/witcher3.jpg
 The Witcher 2;Medieval;25 GB;9.99;2011;img/witcher2.jpg
 Dark Souls;Medieval;12 GB;19.99;2011;img/darksouls.jpg
