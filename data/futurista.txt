@@ -1,18 +1,18 @@
 Cyberpunk 2077;futurista;70 GB;59.99;2020;img/cyberpunk2077.jpg
 Deus Ex Human Revolution;futurista;17 GB;19.99;2011;img/deus_ex.jpg
 Detroit Become Human;futurista;55 GB;39.99;2018;img/detroit.jpg
-Mass Effect Legendary Edition;Futurista;120 GB;29.99;2021;img/masseffect.jpg
-Mass Effect Andromeda;Futurista;60 GB;14.99;2017;img/andromeda.jpg
-Starfield;Futurista;125 GB;59.99;2023;img/starfield.jpg
-No Man's Sky;Futurista;15 GB;24.99;2016;img/nomanssky.jpg
-Halo Infinite;Futurista;50 GB;29.99;2021;img/halo.jpg
-Halo 5 Guardians;Futurista;45 GB;19.99;2015;img/halo5.jpg
-DOOM Eternal;Futurista;50 GB;29.99;2020;img/doom.jpg
-Titanfall 2;Futurista;45 GB;14.99;2016;img/titanfall2.jpg
-Destiny 2;Futurista;90 GB;28.99;2017;img/destiny2.jpg
-Control;Futurista;35 GB;19.99;2019;img/control.jpg
-The Outer Worlds;Futurista;40 GB;24.99;2019;img/outerworlds.jpg
+Mass Effect Legendary Edition;futurista;120 GB;29.99;2021;img/masseffect.jpg
+Mass Effect Andromeda;futurista;60 GB;14.99;2017;img/andromeda.jpg
+Starfield;futurista;125 GB;59.99;2023;img/starfield.jpg
+No Man's Sky;futurista;15 GB;24.99;2016;img/nomanssky.jpg
+Halo Infinite;futurista;50 GB;29.99;2021;img/halo.jpg
+Halo 5 Guardians;futurista;45 GB;19.99;2015;img/halo5.jpg
+DOOM Eternal;futurista;50 GB;29.99;2020;img/doom.jpg
+Titanfall 2;futurista;45 GB;14.99;2016;img/titanfall2.jpg
+Destiny 2;futurista;90 GB;28.99;2017;img/destiny2.jpg
+Subnautica;futurista;35 GB;19.99;2018;img/subnautica.jpg
+The Outer Worlds;futurista;40 GB;24.99;2019;img/outerworlds.jpg
 Prey;Futurista;30 GB;14.99;2017;img/prey.jpg
-Alien Isolation;Futurista;25 GB;9.99;2014;img/alien.jpg
-SOMA;Futurista;20 GB;9.99;2015;img/soma.jpg
-Observation;Futurista;18 GB;14.99;2019;img/observation.jpg
+Alien Isolation;futurista;25 GB;9.99;2014;img/alien.jpg
+SOMA;futurista;20 GB;9.99;2015;img/soma.jpg
+NieR: Automata;futurista;18 GB;31.99;2019;img/nier.jpg
