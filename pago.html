@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pago - RetroJuegos</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .box {
+            background: #222;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #000;
+        }
+
+        h1 {
+            color: #00ff88;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background: #00ff88;
+            color: black;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background: #00cc6a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>🎉 ¡Gracias por tu compra!</h1>
+
+        <p>Tu pago fue procesado correctamente.</p>
+        <p>Disfruta tus juegos 🎮</p>
+
+        <button onclick="volver()">
+            Volver a la tienda
+        </button>
+
+    </div>
+
+    <script>
+        // opcional: limpiar carrito al entrar
+        localStorage.removeItem("carrito");
+
+        function volver() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>
