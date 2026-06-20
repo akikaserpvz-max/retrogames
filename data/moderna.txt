@@ -9,7 +9,7 @@ Battlefield V;Moderna;80 GB;19.99;2018;img/bfv.jpg
 Watch Dogs;Moderna;40 GB;9.99;2014;img/watchdogs.jpg
 Watch Dogs 2;Moderna;50 GB;19.99;2016;img/watchdogs2.jpg
 FIFA 23;Moderna;50 GB;29.99;2022;img/fifa23.jpg
-NBA 2K23;Moderna;110 GB;29.99;2022;img/nba2k23.jpg
+Persona 5 Royal;Moderna;110 GB;29.99;2022;img/p5r.jpg
 Need for Speed Heat;Moderna;30 GB;19.99;2019;img/nfsheat.jpg
 Need for Speed Payback;Moderna;25 GB;14.99;2017;img/nfspayback.jpg
 Far Cry 5;Moderna;40 GB;19.99;2018;img/farcry5.jpg
