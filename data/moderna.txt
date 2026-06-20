@@ -8,7 +8,6 @@ Battlefield 4;Moderna;65 GB;14.99;2013;img/bf4.jpg
 Battlefield V;Moderna;80 GB;19.99;2018;img/bfv.jpg
 Watch Dogs;Moderna;40 GB;9.99;2014;img/watchdogs.jpg
 Watch Dogs 2;Moderna;50 GB;19.99;2016;img/watchdogs2.jpg
-Cyberpunk 2077;Moderna;70 GB;29.99;2020;img/cyberpunk.jpg
 FIFA 23;Moderna;50 GB;29.99;2022;img/fifa23.jpg
 NBA 2K23;Moderna;110 GB;29.99;2022;img/nba2k23.jpg
 Need for Speed Heat;Moderna;30 GB;19.99;2019;img/nfsheat.jpg
