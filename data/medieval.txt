@@ -13,7 +13,7 @@ Dark Souls;Medieval;12 GB;19.99;2011;img/darksouls.jpg
 Dark Souls II;Medieval;15 GB;19.99;2014;img/ds2.jpg
 Dark Souls III;Medieval;25 GB;29.99;2016;img/ds3.jpg
 Elden Ring;Medieval;50 GB;59.99;2022;img/eldenring.jpg
-Skyrim;Medieval;12 GB;19.99;2011;img/skyrim.jpg
+The Elder Scrolls V: Skyrim;Medieval;12 GB;19.99;2011;img/skyrim.jpg
 Dragon Age Origins;Medieval;18 GB;9.99;2009;img/dao.jpg
 Dragon Age Inquisition;Medieval;40 GB;14.99;2014;img/dai.jpg
 Age of Empires II DE;Medieval;10 GB;19.99;2019;img/aoe2de.jpg
